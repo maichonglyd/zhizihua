@@ -1,0 +1,14 @@
+{
+  "themeColor": "fff35a58",
+  "translucentThemeColor": "88f35a58",
+  "textColor": "ff333333",
+  "hintTextColor": "ffbbbbbb",
+  "textSubColor": "ff666666",
+  "textSubColor2": "ff999999",
+  "textSubColor3": "ffcccccc",
+  "lineColor": "fff8f8f8",
+  "checkingColor": "FFF6B345",
+  "checkOkColor": "FF008FFF",
+  "checkFailColor": "FFFF2A2A",
+  "sellOKColor": "FF999999"
+}

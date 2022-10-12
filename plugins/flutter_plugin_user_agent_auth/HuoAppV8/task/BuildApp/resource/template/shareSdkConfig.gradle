@@ -1,0 +1,45 @@
+apply plugin: 'com.mob.sdk'
+
+// 在MobSDK的扩展中注册ShareSDK的相关信息
+MobSDK {
+    appKey "2aeb11acfc0ec"
+    appSecret "4779b5a1f86cec7d66d04d5ca66c18e0"
+
+    ShareSDK {
+        devInfo {
+            Wechat {
+                appId "#{wx_appid}"
+                appSecret "#{wx_appkey}"
+                BypassApproval="false"
+                Enable="true"
+            }
+            QQ {
+                appId "#{qq_appid}"
+                appKey "#{qq_appkey}"
+                shareByAppClient true
+            }
+
+            SinaWeibo {
+                appKey "#{wb_appkey}"
+                appSecret "#{WB_APP_SECRET}"
+                callbackUri "http://www.sharesdk.cn"
+                shareByAppClient false
+            }
+
+            WechatMoments{
+                appId "#{wx_appid}"
+                appSecret "#{wx_appkey}"
+                BypassApproval="false"
+                Enable="true"
+            }
+
+            WechatFavorite{
+                appId "#{wx_appid}"
+                appSecret "#{wx_appkey}"
+                BypassApproval="false"
+                Enable="true"
+            }
+        }
+    }
+
+}

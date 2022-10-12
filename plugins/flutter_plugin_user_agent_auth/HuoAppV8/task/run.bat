@@ -1,0 +1,1 @@
+python BuildApp/huosdk/main.py

@@ -1,0 +1,337 @@
+PODS:
+  - AlipaySDK-iOS (15.5.9)
+  - connectivity (0.0.1):
+    - Flutter
+    - Reachability
+  - Flutter (1.0.0)
+  - flutter_download_plugin (0.0.1):
+    - Flutter
+  - flutter_downloader (0.0.1):
+    - Flutter
+  - flutter_image_compress (0.0.1):
+    - Flutter
+    - Mantle
+    - SDWebImage
+    - SDWebImageWebPCoder
+  - flutter_plugin_user_agent_auth (0.0.1):
+    - Flutter
+  - flutter_webview_plugin (0.0.1):
+    - Flutter
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - image_picker (0.0.1):
+    - Flutter
+  - libwebp (1.1.0):
+    - libwebp/demux (= 1.1.0)
+    - libwebp/mux (= 1.1.0)
+    - libwebp/webp (= 1.1.0)
+  - libwebp/demux (1.1.0):
+    - libwebp/webp
+  - libwebp/mux (1.1.0):
+    - libwebp/demux
+  - libwebp/webp (1.1.0)
+  - Mantle (2.1.1):
+    - Mantle/extobjc (= 2.1.1)
+  - Mantle/extobjc (2.1.1)
+  - mob_sharesdk (4.4.2):
+    - mob_sharesdk/ShareSDK (= 4.4.2)
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDK (4.4.2):
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKExtension (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/DingTalk (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/Douyin (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/Dropbox (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/Evernote (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/Facebook (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/Flickr (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/GooglePlus (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/Instagram (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/Instapaper (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/Kakao (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/KuaiShou (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/Line (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/LinkedIn (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/Messenger (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/MingDao (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/Oasis (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/Pinterest (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/Pocket (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/QQ (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/Reddit (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/SinaWeibo (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/SMS (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/SnapChat (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/Telegram (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/TikTok (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/Twitter (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/VKontakte (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/WatermelonVideo (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/WeChat (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/WhatsApp (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/Yixin (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/YouDaoNote (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKRestoreScene (4.4.2):
+    - mob_sharesdk/ShareSDKExtension
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKUI (4.4.2):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - MOBFoundation (3.2.27)
+  - OpenSSL-Universal (1.0.2.20):
+    - OpenSSL-Universal/Static (= 1.0.2.20)
+  - OpenSSL-Universal/Static (1.0.2.20)
+  - orientation (0.0.1):
+    - Flutter
+  - path_provider_ios (0.0.1):
+    - Flutter
+  - permission_handler (3.3.0):
+    - Flutter
+  - Reachability (3.2)
+  - screen (0.0.1):
+    - Flutter
+  - SDWebImage (5.8.1):
+    - SDWebImage/Core (= 5.8.1)
+  - SDWebImage/Core (5.8.1)
+  - SDWebImageWebPCoder (0.6.1):
+    - libwebp (~> 1.0)
+    - SDWebImage/Core (~> 5.7)
+  - shared_preferences_ios (0.0.1):
+    - Flutter
+  - sharesdk_plugin (1.1.2):
+    - Flutter
+    - mob_sharesdk
+    - mob_sharesdk/ShareSDKExtension
+    - mob_sharesdk/ShareSDKPlatforms/DingTalk
+    - mob_sharesdk/ShareSDKPlatforms/Douyin
+    - mob_sharesdk/ShareSDKPlatforms/Dropbox
+    - mob_sharesdk/ShareSDKPlatforms/Evernote
+    - mob_sharesdk/ShareSDKPlatforms/Facebook
+    - mob_sharesdk/ShareSDKPlatforms/Flickr
+    - mob_sharesdk/ShareSDKPlatforms/GooglePlus
+    - mob_sharesdk/ShareSDKPlatforms/Instagram
+    - mob_sharesdk/ShareSDKPlatforms/Instapaper
+    - mob_sharesdk/ShareSDKPlatforms/Kakao
+    - mob_sharesdk/ShareSDKPlatforms/KuaiShou
+    - mob_sharesdk/ShareSDKPlatforms/Line
+    - mob_sharesdk/ShareSDKPlatforms/LinkedIn
+    - mob_sharesdk/ShareSDKPlatforms/Messenger
+    - mob_sharesdk/ShareSDKPlatforms/MingDao
+    - mob_sharesdk/ShareSDKPlatforms/Oasis
+    - mob_sharesdk/ShareSDKPlatforms/Pinterest
+    - mob_sharesdk/ShareSDKPlatforms/Pocket
+    - mob_sharesdk/ShareSDKPlatforms/QQ
+    - mob_sharesdk/ShareSDKPlatforms/Reddit
+    - mob_sharesdk/ShareSDKPlatforms/SinaWeibo
+    - mob_sharesdk/ShareSDKPlatforms/SMS
+    - mob_sharesdk/ShareSDKPlatforms/SnapChat
+    - mob_sharesdk/ShareSDKPlatforms/Telegram
+    - mob_sharesdk/ShareSDKPlatforms/TikTok
+    - mob_sharesdk/ShareSDKPlatforms/Twitter
+    - mob_sharesdk/ShareSDKPlatforms/VKontakte
+    - mob_sharesdk/ShareSDKPlatforms/WatermelonVideo
+    - mob_sharesdk/ShareSDKPlatforms/WeChat
+    - mob_sharesdk/ShareSDKPlatforms/WhatsApp
+    - mob_sharesdk/ShareSDKPlatforms/Yixin
+    - mob_sharesdk/ShareSDKPlatforms/YouDaoNote
+    - mob_sharesdk/ShareSDKRestoreScene
+    - mob_sharesdk/ShareSDKUI
+  - sqflite (0.0.2):
+    - Flutter
+    - FMDB (>= 2.7.5)
+  - SSZipArchive (2.2.2)
+  - tobias (0.0.1):
+    - AlipaySDK-iOS
+    - Flutter
+  - url_launcher (0.0.1):
+    - Flutter
+  - video_player (0.0.1):
+    - Flutter
+  - wakelock (0.0.1):
+    - Flutter
+  - webview_flutter_wkwebview (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - connectivity (from `.symlinks/plugins/connectivity/ios`)
+  - Flutter (from `Flutter`)
+  - flutter_download_plugin (from `.symlinks/plugins/flutter_download_plugin/ios`)
+  - flutter_downloader (from `.symlinks/plugins/flutter_downloader/ios`)
+  - flutter_image_compress (from `.symlinks/plugins/flutter_image_compress/ios`)
+  - flutter_plugin_user_agent_auth (from `.symlinks/plugins/flutter_plugin_user_agent_auth/ios`)
+  - flutter_webview_plugin (from `.symlinks/plugins/flutter_webview_plugin/ios`)
+  - image_picker (from `.symlinks/plugins/image_picker/ios`)
+  - OpenSSL-Universal
+  - orientation (from `.symlinks/plugins/orientation/ios`)
+  - path_provider_ios (from `.symlinks/plugins/path_provider_ios/ios`)
+  - permission_handler (from `.symlinks/plugins/permission_handler/ios`)
+  - screen (from `.symlinks/plugins/screen/ios`)
+  - shared_preferences_ios (from `.symlinks/plugins/shared_preferences_ios/ios`)
+  - sharesdk_plugin (from `.symlinks/plugins/sharesdk_plugin/ios`)
+  - sqflite (from `.symlinks/plugins/sqflite/ios`)
+  - SSZipArchive
+  - tobias (from `.symlinks/plugins/tobias/ios`)
+  - url_launcher (from `.symlinks/plugins/url_launcher/ios`)
+  - video_player (from `.symlinks/plugins/video_player/ios`)
+  - wakelock (from `.symlinks/plugins/wakelock/ios`)
+  - webview_flutter_wkwebview (from `.symlinks/plugins/webview_flutter_wkwebview/ios`)
+
+SPEC REPOS:
+  trunk:
+    - AlipaySDK-iOS
+    - FMDB
+    - libwebp
+    - Mantle
+    - mob_sharesdk
+    - MOBFoundation
+    - OpenSSL-Universal
+    - Reachability
+    - SDWebImage
+    - SDWebImageWebPCoder
+    - SSZipArchive
+
+EXTERNAL SOURCES:
+  connectivity:
+    :path: ".symlinks/plugins/connectivity/ios"
+  Flutter:
+    :path: Flutter
+  flutter_download_plugin:
+    :path: ".symlinks/plugins/flutter_download_plugin/ios"
+  flutter_downloader:
+    :path: ".symlinks/plugins/flutter_downloader/ios"
+  flutter_image_compress:
+    :path: ".symlinks/plugins/flutter_image_compress/ios"
+  flutter_plugin_user_agent_auth:
+    :path: ".symlinks/plugins/flutter_plugin_user_agent_auth/ios"
+  flutter_webview_plugin:
+    :path: ".symlinks/plugins/flutter_webview_plugin/ios"
+  image_picker:
+    :path: ".symlinks/plugins/image_picker/ios"
+  orientation:
+    :path: ".symlinks/plugins/orientation/ios"
+  path_provider_ios:
+    :path: ".symlinks/plugins/path_provider_ios/ios"
+  permission_handler:
+    :path: ".symlinks/plugins/permission_handler/ios"
+  screen:
+    :path: ".symlinks/plugins/screen/ios"
+  shared_preferences_ios:
+    :path: ".symlinks/plugins/shared_preferences_ios/ios"
+  sharesdk_plugin:
+    :path: ".symlinks/plugins/sharesdk_plugin/ios"
+  sqflite:
+    :path: ".symlinks/plugins/sqflite/ios"
+  tobias:
+    :path: ".symlinks/plugins/tobias/ios"
+  url_launcher:
+    :path: ".symlinks/plugins/url_launcher/ios"
+  video_player:
+    :path: ".symlinks/plugins/video_player/ios"
+  wakelock:
+    :path: ".symlinks/plugins/wakelock/ios"
+  webview_flutter_wkwebview:
+    :path: ".symlinks/plugins/webview_flutter_wkwebview/ios"
+
+SPEC CHECKSUMS:
+  AlipaySDK-iOS: 1c5283b30977a24acecc0114662697f7dc78f618
+  connectivity: 6e94255659cc86dcbef1d452ad3e0491bb1b3e75
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  flutter_download_plugin: c36e9f7f75f2ac5c545efcde91a1562b015b238a
+  flutter_downloader: 058b9c41564a90500f67f3e432e3524613a7fd83
+  flutter_image_compress: fd2b476345226e1a10ea352fa306af95704642c1
+  flutter_plugin_user_agent_auth: d5ddac9dae78f7d3938a653f0f3f6a14730a7818
+  flutter_webview_plugin: ed9e8a6a96baf0c867e90e1bce2673913eeac694
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  image_picker: 16e5fec1fbc87fd3b297c53e4048521eaf17cd06
+  libwebp: 04242ef451672185c1fe41b285a034d2fbda483c
+  Mantle: 35238ae6f2e2b2d474fa7b67fee82a59fea71915
+  mob_sharesdk: a60006891a079486ff3269ed326adfa05a967c01
+  MOBFoundation: efdc3ce6b843fbc10ae8c1c6122a02b0d845b39b
+  OpenSSL-Universal: ff34003318d5e1163e9529b08470708e389ffcdd
+  orientation: 6c9203efe86ce4cff379756910f18b2d745628c3
+  path_provider_ios: 7d7ce634493af4477d156294792024ec3485acd5
+  permission_handler: 67637977b227d62d46bfbf524f335f8568de5a73
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  screen: abd91ca7bf3426e1cc3646d27e9b2358d6bf07b0
+  SDWebImage: e3eae2eda88578db0685a0c88597fdadd9433f05
+  SDWebImageWebPCoder: d0dac55073088d24b2ac1b191a71a8f8d0adac21
+  shared_preferences_ios: aef470a42dc4675a1cdd50e3158b42e3d1232b32
+  sharesdk_plugin: eb1060eb8c5ded0a5eec5e09e83eee986b139cfe
+  sqflite: 6d358c025f5b867b29ed92fc697fd34924e11904
+  SSZipArchive: fa16b8cc4cdeceb698e5e5d9f67e9558532fbf23
+  tobias: 2b26899721bed6d95bbda83725b7ffe4a98ba446
+  url_launcher: 0067ddb8f10d36786672aa0722a21717dba3a298
+  video_player: 9cc823b1d9da7e8427ee591e8438bfbcde500e6e
+  wakelock: 0d4a70faf8950410735e3f61fb15d517c8a6efc4
+  webview_flutter_wkwebview: 005fbd90c888a42c5690919a1527ecc6649e1162
+
+PODFILE CHECKSUM: 48f3abfa6591666e55f40f135ee528c36f0353a9
+
+COCOAPODS: 1.11.0

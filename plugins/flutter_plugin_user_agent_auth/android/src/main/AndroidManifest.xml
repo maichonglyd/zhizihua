@@ -1,0 +1,14 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.huosdk.plugin.flutter_plugin_user_agent_auth">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application>
+        <provider
+            android:name="com.game.sdk.db.AppContentProvider"
+            android:authorities="${applicationId}.appprovider"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+</manifest>

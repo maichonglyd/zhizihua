@@ -1,0 +1,98 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion compile_sdk_version
+    buildToolsVersion build_tools_version
+    defaultConfig {
+        applicationId "com.game.sdk"
+        minSdkVersion min_sdk_version
+        targetSdkVersion target_sdk_version
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        flavorDimensions "versionCode"
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+            }
+        }
+        ndk {
+            // 设置支持的 SO 库构架，注意这里要根据你的实际情况来设置
+            abiFilters 'armeabi','x86','armeabi-v7a', 'arm64-v8a'//, 'x86_64'//, 'mips', 'mips64'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+    /**
+     * 拷贝so库，先编译生成so后拷贝到app目录中的lib下
+     */
+    task copySo(type: Copy, dependsOn: 'assembleRelease') {
+        from("build/intermediates/cmake/alone/release/obj/")
+        into("../../android/src/main/jniLibs")
+    }
+    productFlavors {
+        alone {}
+        plugin {}
+    }
+    buildToolsVersion '27.0.3'
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+}
+task copyToAssets() << {
+    FileTree tree = fileTree('build/outputs/apk/plugin/release/') {
+        include '**/*.apk'
+    }
+    println("sdk_dl apk文件路径为=" + tree.singleFile)
+    if (tree.files.size() != 0) {
+        copy {
+            from tree.singleFile
+            into '../gamesdk/src/main/assets/huosdkv8'
+            rename(tree.singleFile.getName(), 'sdk_native.apk')
+        }
+    }
+}
+copyToAssets.dependsOn(":sdkNative:assemblePluginRelease")
+
+/**
+ *  打包一个混淆的jar
+ *  注意需要配置Release  混淆开启为true才行
+ */
+task buildProguardJar(type: Jar, dependsOn: ['assembleRelease']) {
+    from 'build/intermediates/classes/plugin/release'
+    destinationDir = file('build/outputs/jar/')
+    appendix = "" // SDK的后缀名称
+    baseName = 'sdk_native' // SDK名称
+    version = "" // 这个常量是在gradle.properties中配置的
+    // manifest信息
+    def map = ['Version': android.defaultConfig.versionName,
+               'Gradle' : project.gradle.gradleVersion,
+               'Vendor' : '',
+               'Date'   : new Date().getDateTimeString()
+    ]
+    manifest.attributes(map)
+    exclude('**/BuildConfig.class')
+    exclude('**/BuildConfig\$*.class')
+    exclude('**/R.class')
+    exclude('**/R\$*.class')
+    include "assets/**"
+    //需要包含的内容
+    include('**/*')
+}
+task makeJar(type: Copy) {
+    from "build/outputs/jar"
+    include('sdk_native.jar')
+    into '../../android/libs'
+}
+makeJar.dependsOn("buildProguardJar")

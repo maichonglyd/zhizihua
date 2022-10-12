@@ -1,0 +1,13 @@
+import 'package:flutter_huoshu_app/common/util/huo_log.dart';
+import 'package:flutter_huoshu_app/model/base_model.dart';
+import 'package:flutter_huoshu_app/model/index/lottery/lottery_my_reward_list.dart';
+
+class LotteryStartModel extends BaseModel<LotteryMyRewardBean> {
+  LotteryStartModel.fromJson(jsonRes) : super.fromJson(jsonRes);
+
+  @override
+  void initialResult(jsonRes) {
+    HuoLog.d("initialResult");
+    data = LotteryMyRewardBean.fromJson(jsonRes);
+  }
+}

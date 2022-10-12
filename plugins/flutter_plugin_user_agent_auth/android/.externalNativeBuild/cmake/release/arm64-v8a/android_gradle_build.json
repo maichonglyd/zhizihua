@@ -1,0 +1,41 @@
+
+{
+	"buildFiles" : 
+	[
+		"G:/FlutterProject/flutter_huoshu_app/plugins/flutter_plugin_user_agent_auth/flutter_plugin_user_agent_auth/android/CMakeLists.txt"
+	],
+	"cleanCommands" : 
+	[
+		"D:\\sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build G:\\FlutterProject\\flutter_huoshu_app\\plugins\\flutter_plugin_user_agent_auth\\flutter_plugin_user_agent_auth\\android\\.externalNativeBuild\\cmake\\release\\arm64-v8a --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"hs_sdk-lib-Release-arm64-v8a" : 
+		{
+			"abi" : "arm64-v8a",
+			"artifactName" : "hs_sdk-lib",
+			"buildCommand" : "D:\\sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build G:\\FlutterProject\\flutter_huoshu_app\\plugins\\flutter_plugin_user_agent_auth\\flutter_plugin_user_agent_auth\\android\\.externalNativeBuild\\cmake\\release\\arm64-v8a --target hs_sdk-lib",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=D:/sdk/ndk-bundle/toolchains/aarch64-linux-android-4.9/prebuilt/windows-x86_64 --sysroot=D:/sdk/ndk-bundle/sysroot  -Dhs_sdk_lib_EXPORTS -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\arm64-v8a\\include -isystem D:\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem D:/sdk/ndk-bundle/sysroot/usr/include/aarch64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "G:/FlutterProject/flutter_huoshu_app/plugins/flutter_plugin_user_agent_auth/flutter_plugin_user_agent_auth/android/src/main/cpp/hs_sdk-lib.cpp",
+					"workingDirectory" : "G:/FlutterProject/flutter_huoshu_app/plugins/flutter_plugin_user_agent_auth/flutter_plugin_user_agent_auth/android/.externalNativeBuild/cmake/release/arm64-v8a"
+				}
+			],
+			"output" : "G:/FlutterProject/flutter_huoshu_app/plugins/flutter_plugin_user_agent_auth/flutter_plugin_user_agent_auth/example/build/flutter_plugin_user_agent_auth/intermediates/cmake/release/obj/arm64-v8a/libhs_sdk-lib.so",
+			"toolchain" : "1534523253"
+		}
+	},
+	"toolchains" : 
+	{
+		"1534523253" : 
+		{
+			"cCompilerExecutable" : "D:/sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
+			"cppCompilerExecutable" : "D:/sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
+		}
+	}
+}

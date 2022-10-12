@@ -1,0 +1,26 @@
+{
+  "app_title": "huo app",
+  "tab_home": "home",
+  "tab_category": "category",
+  "tab_welfare": "welfare",
+  "tab_mine": "mine",
+  "login": "login",
+  "welcome_login": "welcome login",
+  "mobile_input_hint": "请输入手机号码",
+  "authcode_input_hint": "请输入验证码",
+  "get_authcode": "获取验证码",
+  "mine_tab_gift": "gift",
+  "mine_tab_service": "service",
+  "mine_tab_security": "security",
+  "mine_tab_gold": "gold",
+
+  "mine_fun_list_invite": "Invite friends",
+  "mine_fun_list_invites": "Invitation list of users",
+  "mine_fun_list_set": "setting",
+
+  "index_tab_zk": "ZK",
+  "index_tab_bt": "BT",
+  "index_tab_new": "NEW",
+  "index_tab_rank": "RANK"
+
+}
