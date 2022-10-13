@@ -653,6 +653,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "textPhoneRegister": MessageLookupByLibrary.simpleMessage("手機註冊"),
         "textPhoneService": MessageLookupByLibrary.simpleMessage("電話客服"),
         "textPicture": MessageLookupByLibrary.simpleMessage("圖片"),
+        "textPlaceReadAndAgree": MessageLookupByLibrary.simpleMessage("請閱讀並同意"),
         "textPlatformColon": MessageLookupByLibrary.simpleMessage("平台："),
         "textPlatformCurrency": MessageLookupByLibrary.simpleMessage("平台幣"),
         "textPlay": MessageLookupByLibrary.simpleMessage("播放"),
@@ -781,7 +782,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "textRefreshData": MessageLookupByLibrary.simpleMessage("鬆開刷新數據"),
         "textRefreshFailAndTry":
             MessageLookupByLibrary.simpleMessage("刷新失敗，請重試。"),
-        "textPlaceReadAndAgree": MessageLookupByLibrary.simpleMessage("請閱讀並同意"),
         "textRefreshGameList": MessageLookupByLibrary.simpleMessage("刷刷遊戲熱榜"),
         "textRegisterAccount": MessageLookupByLibrary.simpleMessage("註冊賬號"),
         "textRegisterAgree": MessageLookupByLibrary.simpleMessage("《註冊協議》"),

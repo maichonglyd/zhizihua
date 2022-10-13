@@ -14,23 +14,22 @@ import 'intl/messages_all.dart';
 
 class S {
   S();
-
+  
   static S current;
-
-  static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
+  
+  static const AppLocalizationDelegate delegate =
+    AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final name = (locale.countryCode?.isEmpty ?? false)
-        ? locale.languageCode
-        : locale.toString();
-    final localeName = Intl.canonicalizedLocale(name);
+    final name = (locale.countryCode?.isEmpty ?? false) ? locale.languageCode : locale.toString();
+    final localeName = Intl.canonicalizedLocale(name); 
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
       S.current = S();
-
+      
       return S.current;
     });
-  }
+  } 
 
   static S of(BuildContext context) {
     return Localizations.of<S>(context, S);
@@ -1806,6 +1805,16 @@ class S {
     );
   }
 
+  /// `Place Read And Agree`
+  String get textPlaceReadAndAgree {
+    return Intl.message(
+      'Place Read And Agree',
+      name: 'textPlaceReadAndAgree',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Exchange Successful`
   String get toastExchangeSuccessful {
     return Intl.message(
@@ -1841,16 +1850,6 @@ class S {
     return Intl.message(
       'Remaining:',
       name: 'textSurplus',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Please read and agree`
-  String get textPlaceReadAndAgree {
-    return Intl.message(
-      'Please read and agree',
-      name: 'textPlaceReadAndAgree',
       desc: '',
       args: [],
     );
@@ -2807,8 +2806,7 @@ class S {
   }
 
   /// `Handling fee {param1}% (minimum {param2} yuan), you can get {param3}{param4} if you sell.`
-  String textLowestServiceCharge(
-      Object param1, Object param2, Object param3, Object param4) {
+  String textLowestServiceCharge(Object param1, Object param2, Object param3, Object param4) {
     return Intl.message(
       'Handling fee $param1% (minimum $param2 yuan), you can get $param3$param4 if you sell.',
       name: 'textLowestServiceCharge',
@@ -6802,6 +6800,16 @@ class S {
     return Intl.message(
       'Details can be viewed in \'Personal Center\'',
       name: 'textSeeDetailInMine',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Request permission description`
+  String get textRequestPermission {
+    return Intl.message(
+      'Request permission description',
+      name: 'textRequestPermission',
       desc: '',
       args: [],
     );

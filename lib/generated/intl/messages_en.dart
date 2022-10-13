@@ -872,6 +872,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "textPhoneService":
             MessageLookupByLibrary.simpleMessage("Phone Service"),
         "textPicture": MessageLookupByLibrary.simpleMessage("Picture"),
+        "textPlaceReadAndAgree":
+            MessageLookupByLibrary.simpleMessage("Place Read And Agree"),
         "textPlatformColon": MessageLookupByLibrary.simpleMessage("Platform:"),
         "textPlatformCurrency":
             MessageLookupByLibrary.simpleMessage("Platform Currency"),
@@ -934,8 +936,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "textPleaseSelectGame":
             MessageLookupByLibrary.simpleMessage("Please select a top-up game"),
         "textPointsExchangeGift": m34,
-        "textPlaceReadAndAgree":
-            MessageLookupByLibrary.simpleMessage("Place Read And Agree"),
         "textPrice": MessageLookupByLibrary.simpleMessage("Price"),
         "textPriceColon": MessageLookupByLibrary.simpleMessage("Price:"),
         "textPriceSymbol": MessageLookupByLibrary.simpleMessage("dollar"),
