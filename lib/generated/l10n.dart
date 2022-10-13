@@ -14,22 +14,23 @@ import 'intl/messages_all.dart';
 
 class S {
   S();
-  
+
   static S current;
-  
-  static const AppLocalizationDelegate delegate =
-    AppLocalizationDelegate();
+
+  static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final name = (locale.countryCode?.isEmpty ?? false) ? locale.languageCode : locale.toString();
-    final localeName = Intl.canonicalizedLocale(name); 
+    final name = (locale.countryCode?.isEmpty ?? false)
+        ? locale.languageCode
+        : locale.toString();
+    final localeName = Intl.canonicalizedLocale(name);
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
       S.current = S();
-      
+
       return S.current;
     });
-  } 
+  }
 
   static S of(BuildContext context) {
     return Localizations.of<S>(context, S);
@@ -1845,6 +1846,16 @@ class S {
     );
   }
 
+  /// `Please read and agree`
+  String get textPlaceReadAndAgree {
+    return Intl.message(
+      'Please read and agree',
+      name: 'textPlaceReadAndAgree',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Registration Agreement`
   String get textRegisterAgreement {
     return Intl.message(
@@ -2796,7 +2807,8 @@ class S {
   }
 
   /// `Handling fee {param1}% (minimum {param2} yuan), you can get {param3}{param4} if you sell.`
-  String textLowestServiceCharge(Object param1, Object param2, Object param3, Object param4) {
+  String textLowestServiceCharge(
+      Object param1, Object param2, Object param3, Object param4) {
     return Intl.message(
       'Handling fee $param1% (minimum $param2 yuan), you can get $param3$param4 if you sell.',
       name: 'textLowestServiceCharge',
@@ -4675,10 +4687,10 @@ class S {
     );
   }
 
-  /// `The registration representative agrees`
+  /// `I have read and agrees`
   String get textRegisterWasAgree {
     return Intl.message(
-      'The registration representative agrees',
+      'I have read and agrees',
       name: 'textRegisterWasAgree',
       desc: '',
       args: [],
@@ -6845,10 +6857,10 @@ class S {
     );
   }
 
-  /// `All terms, authorized location, device information, storage permissions, and other permissions include:\n1, location permissions: provide you with product query and recommendation services based on location information.\n2, device information permissions: after opening, Your device information is associated with your sister playing game software account to provide you with account-related security services. It will read your mobile device identification (IMEI, IMSI) and MAC address and mobile phone number, including the login device that manages your account;\n3, storage permission: after opening, it will be used to save but not limited to product pictures, pictures uploaded during product reviews;\n4, other permissions: you may need to call camera, microphone, address book permissions during use\n\n After logging out, you need to connect to the network to obtain location information and mobile device identification for message push. If you do not agree to obtain the above permissions, you will not be able to enjoy the corresponding services with the corresponding permissions.`
+  /// `All terms, authorized location, device information, storage permissions, and other permissions include:\n1, location permissions: provide you with product query and recommendation services based on location information.\n2, device information permissions: after opening, Your device information is associated with your sister playing game software account to provide you with account-related security services. It will read your mobile device identification (IMEI, IMSI) and MAC address and mobile phone number, including the login device that manages your account;\n3, storage permission: after opening, it will be used to save but not limited to product pictures, pictures uploaded during product reviews;\n4, phone permissions: after opening, it will be used for contact, including but not limited to customer service calls and call records;\n5, other permissions: you may need to call camera, microphone, address book permissions during use\n\n After logging out, you need to connect to the network to obtain location information and mobile device identification for message push. If you do not agree to obtain the above permissions, you will not be able to enjoy the corresponding services with the corresponding permissions.`
   String get textProtocolContent4 {
     return Intl.message(
-      'All terms, authorized location, device information, storage permissions, and other permissions include:\n1, location permissions: provide you with product query and recommendation services based on location information.\n2, device information permissions: after opening, Your device information is associated with your sister playing game software account to provide you with account-related security services. It will read your mobile device identification (IMEI, IMSI) and MAC address and mobile phone number, including the login device that manages your account;\n3, storage permission: after opening, it will be used to save but not limited to product pictures, pictures uploaded during product reviews;\n4, other permissions: you may need to call camera, microphone, address book permissions during use\n\n After logging out, you need to connect to the network to obtain location information and mobile device identification for message push. If you do not agree to obtain the above permissions, you will not be able to enjoy the corresponding services with the corresponding permissions.',
+      'All terms, authorized location, device information, storage permissions, and other permissions include:\n1, location permissions: provide you with product query and recommendation services based on location information.\n2, device information permissions: after opening, Your device information is associated with your sister playing game software account to provide you with account-related security services. It will read your mobile device identification (IMEI, IMSI) and MAC address and mobile phone number, including the login device that manages your account;\n3, storage permission: after opening, it will be used to save but not limited to product pictures, pictures uploaded during product reviews;\n4, phone permissions: after opening, it will be used for contact, including but not limited to customer service calls and call records;\n5, other permissions: you may need to call camera, microphone, address book permissions during use\n\n After logging out, you need to connect to the network to obtain location information and mobile device identification for message push. If you do not agree to obtain the above permissions, you will not be able to enjoy the corresponding services with the corresponding permissions.',
       name: 'textProtocolContent4',
       desc: '',
       args: [],

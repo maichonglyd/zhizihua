@@ -9,6 +9,7 @@ enum RegisterPageAction {
   usernameRegister,
   updateDownTime,
   gotoRegisterAgreement,
+  switchAgreement,
 }
 
 class RegisterPageActionCreator {
@@ -38,5 +39,9 @@ class RegisterPageActionCreator {
 
   static Action updateDownTime(int downTime) {
     return Action(RegisterPageAction.updateDownTime, payload: downTime);
+  }
+
+  static Action switchAgreement(bool check) {
+    return Action(RegisterPageAction.switchAgreement, payload: check);
   }
 }

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart' hide Action, Page;
 class RegisterPageState implements Cloneable<RegisterPageState> {
   bool isPhone = true; //手机号注册/账号注册
   int countdownTime = 120;
+  bool isAgree = false;
 
   var mobileController = new TextEditingController();
   var userNameController = new TextEditingController();
@@ -14,6 +15,7 @@ class RegisterPageState implements Cloneable<RegisterPageState> {
   RegisterPageState clone() {
     return RegisterPageState()
       ..isPhone = isPhone
+      ..isAgree = isAgree
       ..mobileController = mobileController
       ..userNameController = userNameController
       ..authcodeController = authcodeController
@@ -22,5 +24,7 @@ class RegisterPageState implements Cloneable<RegisterPageState> {
 }
 
 RegisterPageState initState(Map<String, dynamic> args) {
-  return RegisterPageState()..isPhone = true;
+  return RegisterPageState()
+    ..isPhone = true
+    ..isAgree = false;
 }

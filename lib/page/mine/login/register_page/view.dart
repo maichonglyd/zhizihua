@@ -5,6 +5,7 @@ import 'package:flutter_huoshu_app/common/style/huo_dimens.dart';
 import 'package:flutter_huoshu_app/generated/l10n.dart';
 import 'package:flutter_huoshu_app/generated/locale_manager.dart';
 import 'package:flutter_huoshu_app/generated/theme/app_theme.dart';
+import 'package:oktoast/oktoast.dart';
 
 import 'action.dart';
 import 'state.dart';
@@ -221,7 +222,9 @@ Widget buildView(
                   dispatch(RegisterPageActionCreator.switchRegisterType());
                 },
                 child: Text(
-                  state.isPhone ? getText(name: 'textAccountRegister') : getText(name: 'textPhoneRegister'),
+                  state.isPhone
+                      ? getText(name: 'textAccountRegister')
+                      : getText(name: 'textPhoneRegister'),
                   style: TextStyle(
                       fontSize: 14, color: AppTheme.colors.textSubColor),
                 ),
@@ -233,19 +236,28 @@ Widget buildView(
                 children: <Widget>[
                   Expanded(
                     child: new MaterialButton(
-                      color: AppTheme.colors.themeColor,
-                      textColor: Colors.white,
+                      color: state.isAgree
+                          ? AppTheme.colors.themeColor
+                          : AppTheme.colors.hintTextColor,
+                      textColor: state.isAgree
+                          ? Colors.white
+                          : AppTheme.colors.textSubColor,
                       child: new Text(getText(name: 'textRegisterNow')),
                       height: 40,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(4))),
-                      onPressed: () {
-                        state.isPhone
-                            ? dispatch(
-                                RegisterPageActionCreator.mobileRegister())
-                            : dispatch(
-                                RegisterPageActionCreator.usernameRegister());
-                      },
+                      onPressed: state.isAgree
+                          ? () {
+                              state.isPhone
+                                  ? dispatch(RegisterPageActionCreator
+                                      .mobileRegister())
+                                  : dispatch(RegisterPageActionCreator
+                                      .usernameRegister());
+                            }
+                          : () {
+                              showToast(getText(name: 'textPlaceReadAndAgree') +
+                                  getText(name: 'textRegisterAgree'));
+                            },
                     ),
                   ),
                 ],
@@ -255,6 +267,14 @@ Widget buildView(
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
+                Checkbox(
+                    materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    activeColor: AppTheme.colors.themeColor,
+                    value: state.isAgree,
+                    onChanged: (value) {
+                      dispatch(
+                          RegisterPageActionCreator.switchAgreement(value));
+                    }),
                 Text(
                   getText(name: 'textRegisterWasAgree'),
                   style: TextStyle(
@@ -266,7 +286,7 @@ Widget buildView(
                     dispatch(RegisterPageActionCreator.gotoRegisterAgreement());
                   },
                   child: Text(
-                     getText(name: 'textRegisterAgree'),
+                    getText(name: 'textRegisterAgree'),
                     style: TextStyle(
                         fontSize: HuoTextSizes.third_title,
                         color: AppTheme.colors.themeColor),
