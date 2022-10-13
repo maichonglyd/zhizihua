@@ -191,31 +191,49 @@ class AppUtil {
   static String formatDate13(int time) {
     if (null == time) time = 0;
     DateTime dateTime = DateTime.fromMillisecondsSinceEpoch(time * 1000);
-    return formatDate(dateTime, [mm, getText(name: 'textMouth'), dd, getText(name: 'textDay')]);
+    return formatDate(dateTime,
+        [mm, getText(name: 'textMouth'), dd, getText(name: 'textDay')]);
   }
 
   //时间格式化 10月10号 00:00
   static String formatDate14(int time) {
     if (null == time) time = 0;
     DateTime dateTime = DateTime.fromMillisecondsSinceEpoch(time * 1000);
-    return formatDate(
-        dateTime, [mm, getText(name: 'textMouth'), dd, '${getText(name: 'textDay')} ', HH, ':', nn,]);
+    return formatDate(dateTime, [
+      mm,
+      getText(name: 'textMouth'),
+      dd,
+      '${getText(name: 'textDay')} ',
+      HH,
+      ':',
+      nn,
+    ]);
   }
 
   //时间格式化 10月10号00:00
   static String formatDate15(int time) {
     if (null == time) time = 0;
     DateTime dateTime = DateTime.fromMillisecondsSinceEpoch(time * 1000);
-    return formatDate(
-        dateTime, [mm, getText(name: 'textMouth'), dd, getText(name: 'textDay'), HH, ':', nn,]);
+    return formatDate(dateTime, [
+      mm,
+      getText(name: 'textMouth'),
+      dd,
+      getText(name: 'textDay'),
+      HH,
+      ':',
+      nn,
+    ]);
   }
 
   //时间格式化 00:00
   static String formatDate16(int time) {
     if (null == time) time = 0;
     DateTime dateTime = DateTime.fromMillisecondsSinceEpoch(time * 1000);
-    return formatDate(
-        dateTime, [HH, ':', nn,]);
+    return formatDate(dateTime, [
+      HH,
+      ':',
+      nn,
+    ]);
   }
 
   //时间格式化 10月10号00:00, 并判断是否是今天或明天
@@ -231,24 +249,29 @@ class AppUtil {
     } else if (1 == result) {
       return getText(name: "textTomorrow") + hour;
     }
-    return formatDate(
-        dateTime, [mm, getText(name: "textMouth"), dd, getText(name: "textDay"), HH, ':', nn,]);
+    return formatDate(dateTime, [
+      mm,
+      getText(name: "textMouth"),
+      dd,
+      getText(name: "textDay"),
+      HH,
+      ':',
+      nn,
+    ]);
   }
 
   //时间格式化 2019-10-10 00:00
   static String formatDate18(int time) {
     if (null == time) time = 0;
     DateTime dateTime = DateTime.fromMillisecondsSinceEpoch(time * 1000);
-    return formatDate(
-        dateTime, [yyyy, '-', mm, '-', dd, ' ', HH, ':', nn]);
+    return formatDate(dateTime, [yyyy, '-', mm, '-', dd, ' ', HH, ':', nn]);
   }
 
   //时间格式化 05-12 19:39
   static String formatDate19(int time) {
     if (null == time) time = 0;
     DateTime dateTime = DateTime.fromMillisecondsSinceEpoch(time * 1000);
-    return formatDate(
-        dateTime, [mm, '-', dd, ' ', HH, ':', nn]);
+    return formatDate(dateTime, [mm, '-', dd, ' ', HH, ':', nn]);
   }
 
   ///获取缓存大小
@@ -275,7 +298,7 @@ class AppUtil {
     if (null == value) {
       return "0";
     }
-    List<String> unitArr = List()..add('B')..add('K')..add('M')..add('G');
+    List<String> unitArr = ['B', 'K', 'M', 'G'];
     int index = 0;
     while (value > 1000) {
       index++;
@@ -452,7 +475,8 @@ class AppUtil {
   }
 
   //  跳转页面
-  static Future gotoH5Web(BuildContext context, String url, {String title, bool noHttpParam = false}) {
+  static Future gotoH5Web(BuildContext context, String url,
+      {String title, bool noHttpParam = false}) {
     if (!LoginControl.isLogin() && !noHttpParam) {
       return AppUtil.gotoPageByName(context, LoginPage.pageName);
     }
@@ -484,7 +508,7 @@ class AppUtil {
       } else {
         return var1.toStringAsFixed(digits);
       }
-    } catch(e) {
+    } catch (e) {
       return '0';
     }
   }
@@ -517,7 +541,8 @@ class AppUtil {
     }
   }
 
-  static String gameTypeTransport(List<String> type, String replace, int length) {
+  static String gameTypeTransport(
+      List<String> type, String replace, int length) {
     if (null != type && type.length > 0) {
       String result = '';
       for (int i = 0; i < type.length; i++) {
@@ -533,27 +558,33 @@ class AppUtil {
     return '';
   }
 
+  /// 获取打电话权限
+  /// 如果拒绝 则两天后再启动时重新询问，直到同意或卸载
   static Future<bool> checkPhonePermission() async {
     if (!Platform.isAndroid) {
       return true;
     }
 
     PermissionStatus permission =
-    await PermissionHandler().checkPermissionStatus(PermissionGroup.phone);
+        await PermissionHandler().checkPermissionStatus(PermissionGroup.phone);
     if (permission != PermissionStatus.granted) {
       num date = SpUtil.prefs.getInt(SpUtil.PERMISSION_PHONE_LAST_TIME);
-      if (null != date && DateTime.now().difference(DateTime.fromMillisecondsSinceEpoch(date)).inDays < 2) {
+      if (null != date &&
+          DateTime.now()
+                  .difference(DateTime.fromMillisecondsSinceEpoch(date))
+                  .inDays <
+              2) {
         return false;
       }
 
       Map<PermissionGroup, PermissionStatus> permissions =
-      await PermissionHandler().requestPermissions(
-          [PermissionGroup.phone]);
+          await PermissionHandler().requestPermissions([PermissionGroup.phone]);
       PermissionStatus status = permissions[PermissionGroup.phone];
       if (status == PermissionStatus.granted) {
         return true;
       } else {
-        SpUtil.prefs.setInt(SpUtil.PERMISSION_PHONE_LAST_TIME, DateTime.now().millisecondsSinceEpoch);
+        SpUtil.prefs.setInt(SpUtil.PERMISSION_PHONE_LAST_TIME,
+            DateTime.now().millisecondsSinceEpoch);
         return false;
       }
     } else {

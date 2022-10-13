@@ -2,11 +2,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 /// @author liu hong liang
 /// @date 2019/8/25
-/// sp初始化类
-///
+/// sp初始化类 SharedPreferences
+/// 本地缓存
 ///
 
-class SpUtil{
+class SpUtil {
   static SharedPreferences prefs;
 
   static final String NEED_CHANGE_URL = "NEED_CHANGE_URL";
@@ -24,6 +24,7 @@ class SpUtil{
       prefs = await SharedPreferences.getInstance();
     }
   }
+
   static Future<SharedPreferences> getSP() async {
     return SharedPreferences.getInstance();
   }
